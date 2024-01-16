@@ -8,6 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 class Product {
+	public Product() {
+
+	}
+
 	enum Status{
 		IN_STOCK,
 		OUT_OF_STOCK,
@@ -21,9 +25,6 @@ class Product {
 	private Boolean available;
 
 	private Status product_status;
-
-
-	Product() {}
 
 	Product(String name, Integer price, Integer quantity, Boolean available, Status productStatus) {
 		this.name = name;

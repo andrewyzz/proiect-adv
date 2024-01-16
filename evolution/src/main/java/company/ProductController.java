@@ -74,7 +74,7 @@ class ProductController {
 
 	// tag::put[]
 	@PutMapping("/products/{id}")
-	Product replaceCar(@RequestBody Product newProduct, @PathVariable Long id) {
+	Product replaceProduct(@RequestBody Product newProduct, @PathVariable Long id) {
 
 		return repository.findById(id)
 				.map(product -> {
